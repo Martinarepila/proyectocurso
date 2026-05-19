@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guía J.V.G. por Rubros</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .ui-listview > li > a {
+    background-color: rgba(200, 160, 255, 0.75) !important; /* Lila transparente */
+    color: #2e004f !important;
+    text-shadow: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    
+    /* Esto es lo que hace la solapa más ANCHA */
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    margin-bottom: 10px !important;
+    border-radius: 12px !important;
+}
+
+/* Agregá esto también para que el icono quede centrado con la nueva altura */
+.ui-listview .ui-li-thumb {
+    top: 50% !important;
+    margin-top: -40px !important; 
+    left: 10px !important;
+}
+/* FONDO GENERAL DE LA APP */
+    .ui-page {
+        background-image: url('https://images.unsplash.com/photo-1517733925043-4730485091bf?q=80&w=2070&auto=format&fit=crop') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: fixed !important;
+    }
+
+    /* ESTILO DE LAS SOLAPAS (LISTAS) */
+    .ui-listview > li > a {
+        /* Color Lila: R=200, G=160, B=255 | Transparencia: 0.7 */
+        background-color: rgba(200, 160, 255, 0.7) !important; 
+        color: #2e004f !important; /* Texto violeta oscuro para que resalte */
+        text-shadow: none !important;
+        border-color: rgba(255, 255, 255, 0.3) !important; /* Bordes suaves */
+        margin-bottom: 5px; /* Separación entre solapas */
+    }
+
+    /* Efecto al tocar la solapa */
+    .ui-listview > li > a:active, .ui-listview > li > a:hover {
+        background-color: rgba(180, 130, 255, 0.9) !important;
+    }
+
+    /* Ajuste de iconos y textos */
+    .icono-rubro { 
+        padding: 8px; 
+        background: rgba(255, 255, 255, 0.3); /* Fondo circular suave para el icono */
+        border-radius: 50%;
+        margin: 5px;
+    }
+
+    .ui-content {
+        background: transparent !important;
+    }
+
+    /* Títulos en blanco para que se vean sobre el fondo oscuro */
+    h1, h2, h3 {
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+        .icono-rubro { padding: 10px; }
+    /* Aplicar el fondo a todas las páginas */
+    .ui-page {
+        background: url('https://turismo.buenosaires.gob.ar/sites/turismo/files/obelisco-baverde-noche-luces1500x610.jpg') no-repeat center center fixed !important;
+        background-size: cover !important;
+    }
+
+    /* Opcional: Hacer que el contenido sea un poco transparente para que se vea el fondo */
+    .ui-content {
+        background: rgba(255, 255, 255, 0.2); /* Blanco con 20% de opacidad */
+        text-shadow: none !important; /* Quita sombras de texto que molestan en fondos */
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <section data-role="page" id="home" data-theme="b">
+        <header data-role="header">
+            <h1>Guía Comercial JVG</h1>
+        </header>
+
+        <div data-role="content">
+            <h2 style="text-align:center;">Seleccioná un Rubro</h2>
+            <ul data-role="listview" data-inset="true">
+                <li>
+    <a href="#pagColegios">
+        <img src="https://img.icons8.com/color/96/school.png" class="icono-rubro">
+        <h2>Colegios</h2>
+        <p>Instituciones educativas cercanas</p>
+    </a>
+</li>
+                <li>
+                    <a href="#pagLibrerias" data-transition="slide">
+                        <img src="https://img.icons8.com/color/96/book.png" class="icono-rubro">
+                        <h2>Librerías y Copias</h2>
+                        <p>Apuntes, textos y útiles</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#pagGastronomia" data-transition="slide">
+                        <img src="https://img.icons8.com/color/96/restaurant.png" class="icono-rubro">
+                        <h2>Gastronomía</h2>
+                        <p>Restaurantes, bares y comida rápida</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#pagCafes" data-transition="slide">
+                        <img src="https://img.icons8.com/emoji/96/hot-beverage.png" class="icono-rubro">
+                        
+                        <h2>Cafeterías</h2>
+                        <p>Para estudiar o merendar</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4>Instituto J. V. González</h4>
+        </footer>
+    </section>
+
+
+    <section data-role="page" id="pagLibrerias" data-theme="b">
+        <header data-role="header">
+            <a href="#home" data-icon="carat-l">Volver</a>
+            <h1>Librerías</h1>
+        </header>
+
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li>
+                    <a href="#">
+                        <img src="https://img.icons8.com/color/96/copy-machine.png">
+                        <h2>Nuevas Gráficas</h2>
+                        <p>Ayacucho 600 - Especialistas en apuntes.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://img.icons8.com/color/96/pencil-tip.png">
+                        <h2>Librería El Poli</h2>
+                        <p>Viamonte 1800 - Todo para el estudiante.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section data-role="page" id="pagGastronomia" data-theme="b">
+        <header data-role="header">
+            <a href="#home" data-icon="carat-l">Volver</a>
+            <h1>Gastronomía</h1>
+        </header>
+
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li>
+                    <a href="#">
+                        <img src="https://img.icons8.com/color/96/pizza.png">
+                        <h2>El Palacio de la Papa Frita</h2>
+                        <p>Lavalle 1500 - Minutas y platos clásicos.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://img.icons8.com/color/96/hamburger-suprise.png">
+                        <h2>Mostaza</h2>
+                        <p>Av. Córdoba y Callao - Combos rápidos.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section data-role="page" id="pagCafes" data-theme="b">
+        
+        <header data-role="header">
+            <a href="#home" data-icon="carat-l">Volver</a>
+            <h1>Cafeterías</h1>
+        </header>
+
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" data-filter="true">
+                <li>
+                    <a href="#">
+                        <img src="https://img.icons8.com/color/96/starbucks.png">
+                        <h2>Starbucks</h2>
+                        <p>Av. Córdoba 1800 - WiFi y café.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://img.icons8.com/color/96/croissant.png">
+                        <h2>Le Blé</h2>
+                        <p>Ayacucho y Viamonte - Panadería artesanal.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+<section data-role="page" id="pagColegios">
+    <header data-role="header" data-theme="b">
+        <a href="#home" data-icon="carat-l">Volver</a>
+        <h1>Colegios</h1>
+    </header>
+
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+            <li>
+                <a href="#">
+                    <img src="https://img.icons8.com/color/96/university.png">
+                    <h2>Colegio Champagnat</h2>
+                    <p>Montevideo 1050</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://img.icons8.com/color/96/diploma.png">
+                    <h2>Escuela Normal N°1</h2>
+                    <p>Av. Córdoba 1951</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://img.icons8.com/color/96/playground.png">
+                    <h2>Colegio San José</h2>
+                    <p>Azcuénaga 158</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+</body>
+</html>
